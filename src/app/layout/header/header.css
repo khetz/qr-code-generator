@@ -1,0 +1,22 @@
+nav {
+    width: 100%;
+    border-bottom: solid #e0e0e0 1px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.theme-toggle {
+    width: 24px;
+    height: 24px;
+    border: solid purple 1px;
+}
+
+.logo-section {
+    width: 128px;
+    height: 48px;
+    border: solid purple 1px;
+}
+
