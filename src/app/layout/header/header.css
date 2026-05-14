@@ -8,15 +8,15 @@ nav {
     overflow: hidden;
 }
 
-.theme-toggle {
-    width: 24px;
-    height: 24px;
-    border: solid purple 1px;
-}
-
 .logo-section {
+    display: flex;
+    align-items: center;
     width: 128px;
     height: 48px;
-    border: solid purple 1px;
+}
+
+button {
+    border: none;
+    background: none;
 }
 
