@@ -1,0 +1,13 @@
+.card-container {
+    border: solid black 1px;
+    padding: 4px 8px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+:host {
+    display: block;
+    flex: 1 1 60px;
+}
