@@ -1,0 +1,54 @@
+.qr-input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user-input-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-input-section p {
+    margin: 0;
+}
+
+.input-section {
+    position: relative;
+    width: 100%;
+}
+
+span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 1;
+    min-width: 40px;
+}
+
+.left-icon {
+    left: 5px;
+}
+
+.right-icon {
+    right: -10px;
+}
+
+mat-icon {
+    display: block;
+}
+
+
+input {
+    border-radius: 8px;
+    border: solid 1px rgba(0,0,0,0.5);
+    /* height: 32px; */
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+
+}
+
+.input-description {
+    font-size: 10px;
+    color: gray;
+}
