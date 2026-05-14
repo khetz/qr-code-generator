@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { Header } from '../header/header';
-import { Footer } from '../footer/footer';
+import { QrInputTypeSection } from "../../features/qr-generation/components/qr-input-type-section/qr-input-type-section";
 
 @Component({
   selector: 'app-home',
-  imports: [Header, Footer],
+  imports: [Header, QrInputTypeSection],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
