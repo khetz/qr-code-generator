@@ -2,6 +2,7 @@
     <app-header></app-header>
     <div class="content-section">
         <app-qr-input-type-section></app-qr-input-type-section>
-        <app-qr-input-section></app-qr-input-section>
+        <app-qr-input-section (qrInputChange)="qrData = $event"></app-qr-input-section>
+        <app-qr-code-preview [qrData]="qrData"></app-qr-code-preview>
     </div>
 </div>

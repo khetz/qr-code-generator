@@ -9,7 +9,7 @@
             <span class="left-icon">
                 <mat-icon>language</mat-icon>
             </span>
-            <input />
+            <input type="text" (input)="onInputChange($any($event.target).value)"/>
             <span class="right-icon">
                 <mat-icon>language</mat-icon>
             </span>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
@@ -7,4 +7,10 @@ import { MatIconModule } from '@angular/material/icon';
   templateUrl: './qr-input-section.html',
   styleUrl: './qr-input-section.css',
 })
-export class QrInputSection {}
+export class QrInputSection {
+  @Output() qrInputChange = new EventEmitter<string>();
+
+  onInputChange(value: string) {
+    this.qrInputChange.emit(value);
+  }
+}
