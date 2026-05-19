@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h4 {
+    margin:0;
+}
+
+.qr-code-section {
+    display: flex;
+    justify-content: center;
+}
+
+.qr-download-sharing {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.qr-download-sharing button {
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+
+.sharing {
+    display: flex;
+    width: 100%;
+    gap: 5px;
+}
+
+.sharing button {
+    flex: 1;
+}
