@@ -12,4 +12,13 @@ import { QrCodePreview } from "../../features/qr-generation/components/qr-code-p
 })
 export class Home {
   qrData: string = '';
+  currentInput: string = '';
+
+  onQRInputChange(value: string) {
+    this.currentInput = value.trim();
+
+   if (this.currentInput) {
+    this.qrData = this.currentInput;
+   }
+  }
 }
