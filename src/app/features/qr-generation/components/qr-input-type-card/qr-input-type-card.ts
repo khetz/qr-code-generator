@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
@@ -7,4 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
   templateUrl: './qr-input-type-card.html',
   styleUrl: './qr-input-type-card.css',
 })
-export class QrInputTypeCard {}
+export class QrInputTypeCard {
+  @Input() icon: string = '';
+  @Input() text: string = '';
+}

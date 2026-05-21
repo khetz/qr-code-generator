@@ -4,8 +4,8 @@
     </div>
 
     <div class="input-type-cards">
-        @for (i of items; track i) {
-        <app-qr-input-type-card></app-qr-input-type-card>
+        @for (type of qrTypes; track type) {
+        <app-qr-input-type-card [icon]="type.icon" [text]="type.text"></app-qr-input-type-card>
         }
     </div>
 
