@@ -8,6 +8,11 @@ import { QrInputTypeCard } from "../qr-input-type-card/qr-input-type-card";
   styleUrl: './qr-input-type-section.css',
 })
 export class QrInputTypeSection {
-
-  items: number[] = [1,2,3,4,5]
+  qrTypes = [
+    { icon: "link", text: "URL"},
+    { icon: "title", text: "Text"},
+    { icon: "email", text: "Email"},
+    { icon: "phone", text: "Phone"},
+    { icon: "wifi", text: "WiFi"}
+  ]
 }
