@@ -11,3 +11,11 @@
     flex-direction: column;
     gap: 20px;
 }
+
+@media (min-width: 768px) {
+    .content-section {
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 40px;
+    }
+}

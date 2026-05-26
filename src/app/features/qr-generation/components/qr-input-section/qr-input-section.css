@@ -2,6 +2,9 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    border: black solid 1px;
+    border-radius: 8px;
+    padding: 20px;
 }
 
 h4 {
@@ -46,7 +49,6 @@ mat-icon {
 input {
     border-radius: 8px;
     border: solid 1px rgba(0,0,0,0.5);
-    /* height: 32px; */
     width: 100%;
     padding: 10px 10px 10px 40px;
 
@@ -55,4 +57,26 @@ input {
 .input-description {
     font-size: 10px;
     color: gray;
+}
+
+@media(min-width: 768px) {
+    :host {
+        width: 50%;
+    }
+
+    .qr-input-section {
+        gap: 20px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    input {
+        height: 50px;
+    }
+
+    .input-description {
+        font-size: 14px;
+    }
 }
