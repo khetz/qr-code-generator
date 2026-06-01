@@ -1,12 +1,19 @@
 <div class="container">
     <h4>QR Code Preview</h4>
     <div class="qr-code-section">
-        <qrcode cssClass="code" [qrdata]="qrData" [width]="qrCodeWidth" [allowEmptyString]="true"></qrcode>
+        <qrcode [qrdata]="qrData" [width]="qrCodeWidth" [allowEmptyString]="true" elementType="svg"
+            (qrCodeURL)="onSvgUrlChange($event)">
+        </qrcode>
+        <div class="png-code">
+            <qrcode [qrdata]="qrData" [width]="qrCodeWidth" [allowEmptyString]="true" elementType="canvas"
+                (qrCodeURL)="onPngUrlChange($event)">
+            </qrcode>
+        </div>
     </div>
     <div class="qr-download-sharing">
         <div class="download">
-            <button>Download (PNG)</button>
-            <button>Download (SVG)</button>
+            <button (click)="downloadImage(pngDownloadUrl, 'qrcode.png')">Download (PNG)</button>
+            <button (click)="downloadImage(svgDownloadUrl, 'qrcode.svg')">Download (SVG)</button>
         </div>
 
         <div class="sharing">
