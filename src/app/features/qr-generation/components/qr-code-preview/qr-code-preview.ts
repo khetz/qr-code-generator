@@ -1,7 +1,8 @@
-import { Component, inject, Input, OnInit } from '@angular/core';
-import { QRCodeComponent } from 'angularx-qrcode';
+import { Clipboard } from '@angular/cdk/clipboard';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Component, inject, input, OnInit } from '@angular/core';
 import { SafeUrl } from '@angular/platform-browser';
+import { QRCodeComponent } from 'angularx-qrcode';
 
 @Component({
   selector: 'app-qr-code-preview',
@@ -10,13 +11,14 @@ import { SafeUrl } from '@angular/platform-browser';
   styleUrl: './qr-code-preview.css',
 })
 export class QrCodePreview implements OnInit {
-  @Input() qrData = '';
+  readonly qrData = input<string>('');
   qrCodeWidth = 150;
 
   svgDownloadUrl: SafeUrl = '';
   pngDownloadUrl: SafeUrl = '';
 
   private breakpointObserver = inject(BreakpointObserver);
+  private readonly clipboard = inject(Clipboard);
 
   ngOnInit(): void {
     this.breakpointObserver.observe([
@@ -84,6 +86,11 @@ export class QrCodePreview implements OnInit {
     if (fileName.endsWith('.svg') && finalUrl.startsWith('blob:')) {
       URL.revokeObjectURL(finalUrl);
     }
+  }
+
+  copyLink() {
+    let link = this.qrData();
+    this.clipboard.copy(link);
   }
 
 }
