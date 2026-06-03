@@ -3,6 +3,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, inject, input, OnInit } from '@angular/core';
 import { SafeUrl } from '@angular/platform-browser';
 import { QRCodeComponent } from 'angularx-qrcode';
+import { ToastService } from '../../../../core/services/toast.service';
 
 @Component({
   selector: 'app-qr-code-preview',
@@ -19,6 +20,7 @@ export class QrCodePreview implements OnInit {
 
   private breakpointObserver = inject(BreakpointObserver);
   private readonly clipboard = inject(Clipboard);
+  private readonly toastService = inject(ToastService);
 
   ngOnInit(): void {
     this.breakpointObserver.observe([
@@ -91,6 +93,7 @@ export class QrCodePreview implements OnInit {
   copyLink() {
     let link = this.qrData();
     this.clipboard.copy(link);
+    this.toastService.success("Link copied!");
   }
 
 }

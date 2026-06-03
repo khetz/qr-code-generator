@@ -1,0 +1,20 @@
+.shell {
+    display: flex;
+    flex-direction: column;
+    padding: 2px 16px;
+    color: white;
+    background-color: #333;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    flex: 1;
+    pointer-events: none;
+    border-radius: 8px;
+}
+
+.close-button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.success {
+    background: #2e7d32;
+}
