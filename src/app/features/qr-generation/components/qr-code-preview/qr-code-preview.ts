@@ -4,10 +4,11 @@ import { Component, inject, input, OnInit } from '@angular/core';
 import { SafeUrl } from '@angular/platform-browser';
 import { QRCodeComponent } from 'angularx-qrcode';
 import { ToastService } from '../../../../core/services/toast.service';
+import { ShareMenuComponent } from '../../../../shared/dropdowns/share-menu.component/share-menu.component';
 
 @Component({
   selector: 'app-qr-code-preview',
-  imports: [QRCodeComponent],
+  imports: [QRCodeComponent, ShareMenuComponent],
   templateUrl: './qr-code-preview.html',
   styleUrl: './qr-code-preview.css',
 })
@@ -21,6 +22,8 @@ export class QrCodePreview implements OnInit {
   private breakpointObserver = inject(BreakpointObserver);
   private readonly clipboard = inject(Clipboard);
   private readonly toastService = inject(ToastService);
+
+  openShareMenu: boolean = false;
 
   ngOnInit(): void {
     this.breakpointObserver.observe([
@@ -94,6 +97,10 @@ export class QrCodePreview implements OnInit {
     let link = this.qrData();
     this.clipboard.copy(link);
     this.toastService.success("Link copied!");
+  }
+
+  openShareOptions() {
+    this.openShareMenu = !this.openShareMenu;
   }
 
 }

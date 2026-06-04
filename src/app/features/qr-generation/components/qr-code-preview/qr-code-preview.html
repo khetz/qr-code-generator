@@ -18,7 +18,11 @@
 
         <div class="sharing">
             <button (click)="copyLink()">Copy URL</button>
-            <button>Share</button>
+            <div class="share-options">
+                <button (click)="openShareOptions()">Share</button>
+
+                <app-share-menu [class.open]="openShareMenu"></app-share-menu>
+            </div>
         </div>
     </div>
 </div>
