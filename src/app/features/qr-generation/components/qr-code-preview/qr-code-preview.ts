@@ -5,10 +5,11 @@ import { SafeUrl } from '@angular/platform-browser';
 import { QRCodeComponent } from 'angularx-qrcode';
 import { ToastService } from '../../../../core/services/toast.service';
 import { ShareMenuComponent } from '../../../../shared/dropdowns/share-menu.component/share-menu.component';
+import { ClickOutsideDirective } from "../../../../shared/directives/click-outside.directive";
 
 @Component({
   selector: 'app-qr-code-preview',
-  imports: [QRCodeComponent, ShareMenuComponent],
+  imports: [QRCodeComponent, ShareMenuComponent, ClickOutsideDirective],
   templateUrl: './qr-code-preview.html',
   styleUrl: './qr-code-preview.css',
 })
@@ -101,6 +102,10 @@ export class QrCodePreview implements OnInit {
 
   openShareOptions() {
     this.openShareMenu = !this.openShareMenu;
+  }
+
+  closeShareOptions() {
+    this.openShareMenu = false;
   }
 
 }

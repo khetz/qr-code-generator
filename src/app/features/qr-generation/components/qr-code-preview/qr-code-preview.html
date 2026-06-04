@@ -18,7 +18,7 @@
 
         <div class="sharing">
             <button (click)="copyLink()">Copy URL</button>
-            <div class="share-options">
+            <div class="share-options" appClickOutside (clickOutside)="closeShareOptions()">
                 <button (click)="openShareOptions()">Share</button>
 
                 <app-share-menu [class.open]="openShareMenu"></app-share-menu>
