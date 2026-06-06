@@ -6,6 +6,8 @@ import { QRCodeComponent } from 'angularx-qrcode';
 import { ToastService } from '../../../../core/services/toast.service';
 import { ShareMenuComponent } from '../../../../shared/dropdowns/share-menu.component/share-menu.component';
 import { ClickOutsideDirective } from "../../../../shared/directives/click-outside.directive";
+import { HistoryService } from '../../../../core/services/history.service';
+import { History } from '../../../../shared/models/history.model';
 
 @Component({
   selector: 'app-qr-code-preview',
@@ -23,6 +25,7 @@ export class QrCodePreview implements OnInit {
   private breakpointObserver = inject(BreakpointObserver);
   private readonly clipboard = inject(Clipboard);
   private readonly toastService = inject(ToastService);
+  private readonly historyService = inject(HistoryService);
 
   openShareMenu: boolean = false;
 
@@ -108,4 +111,17 @@ export class QrCodePreview implements OnInit {
     this.openShareMenu = false;
   }
 
+  addHistoryEntry() {
+    if (this.qrData() == '') {
+      this.toastService.error('Cannot add empty url to history');
+      return;
+    }
+
+    const historyEntry: History = {
+      url: this.qrData(),
+      creationTime: "Just now"
+    }
+
+    this.historyService.addHistoryEntry(historyEntry);
+  }
 }
