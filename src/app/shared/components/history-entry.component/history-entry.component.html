@@ -2,7 +2,7 @@
     <span class="column">{{formatUrl(history().url)}}</span>
     <span class="column">{{history().creationTime}}</span>
     <div class="action-options column">
-        <button>Copy</button>
+        <button (click)="copyURL(history().url)">Copy</button>
         <button>Regenerate QR code</button>
     </div>
 </div>
