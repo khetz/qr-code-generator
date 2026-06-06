@@ -1,1 +1,14 @@
-<p>history-page.component works!</p>
+<div class="container">
+    <app-header></app-header>
+    <div class="title-section">
+        <button (click)="goBackToHome()">Back</button>
+        <h1 class="title">Recent QR Codes</h1>
+        <button class="clear-all" (click)="clearAllHistory()">Clear All</button>
+    </div>
+
+    <div class="history-list">
+        @for(historyEntry of reversedList; track historyEntry.url) {
+         <app-history-entry [history]="historyEntry"></app-history-entry>
+        }
+    </div>
+</div>
