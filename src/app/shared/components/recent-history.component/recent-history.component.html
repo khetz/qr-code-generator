@@ -7,7 +7,10 @@
         </div>
     </div>
 
-    @for(historyEntry of historyList(); track historyEntry) {
-    <app-history-entry [history]="historyEntry"></app-history-entry>
-    }
+    <div class="history-list">
+        @for(historyEntry of historyList(); track historyEntry) {
+        <app-history-entry [history]="historyEntry"></app-history-entry>
+        }
+    </div>
+
 </div>
