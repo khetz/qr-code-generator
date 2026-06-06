@@ -4,6 +4,7 @@ import { SafeUrl } from '@angular/platform-browser';
 import { ToastService } from '../../../core/services/toast.service';
 import { Clipboard } from '@angular/cdk/clipboard';
 import { Router } from '@angular/router';
+import { formatTimeAgo } from '../../utils/time-ago.util';
 
 @Component({
   selector: 'app-history-entry',
@@ -16,6 +17,7 @@ export class HistoryEntryComponent {
   private readonly clipboard = inject(Clipboard);
   private readonly toastService = inject(ToastService);
   private readonly router = inject(Router);
+  formatCreationTime = formatTimeAgo;
 
   readonly regenerateQR = output<string>();
 

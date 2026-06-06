@@ -119,7 +119,7 @@ export class QrCodePreview implements OnInit {
 
     const historyEntry: History = {
       url: this.qrData(),
-      creationTime: "Just now"
+      creationTime: new Date().toISOString()
     }
 
     this.historyService.addHistoryEntry(historyEntry);
