@@ -1,9 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { HistoryService } from '../../../core/services/history.service';
+import { HistoryEntryComponent } from '../history-entry.component/history-entry.component';
 
 @Component({
   selector: 'app-recent-history',
-  imports: [],
+  imports: [HistoryEntryComponent],
   templateUrl: './recent-history.component.html',
   styleUrl: './recent-history.component.css',
 })
-export class RecentHistoryComponent {}
+export class RecentHistoryComponent {
+  historyService = inject(HistoryService);
+  readonly historyList = this.historyService.qrHistory;
+}

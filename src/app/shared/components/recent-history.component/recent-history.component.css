@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: black solid 1px;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+h4 {
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-action-buttons {
+    display: flex;
+    gap: 4px;
+}
+
+@media(min-width: 768px) {
+    h4 {
+        font-size: 20px;
+    }
+}
