@@ -39,13 +39,6 @@ h4 {
     gap: 5px;
 }
 
-.qr-download-sharing button {
-    height: 30px;
-    border: 1px solid gray;
-    border-radius: 8px;
-    font-weight: 600;
-}
-
 .sharing {
     display: flex;
     width: 100%;
@@ -57,7 +50,8 @@ h4 {
     position: relative;
 }
 
-.sharing .share-options button {
+.sharing .share-options button, 
+.add-to-history button  {
     width: 100%;
 }
 
@@ -65,6 +59,13 @@ app-share-menu.open {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
+}
+
+.container button {
+    height: 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    border: rgba(0, 0, 0, 0.2) 1px solid;
 }
 
 
@@ -92,7 +93,6 @@ app-share-menu.open {
 
     .qr-download-sharing button {
         height: 50px;
-        border: 1px solid gray;
         border-radius: 8px;
     }
 
@@ -102,7 +102,8 @@ app-share-menu.open {
         gap: 10px;
     }
 
-    button {
+    .container button {
+        height: 50px;
         flex: 1;
         font-size: 14px;
     }
