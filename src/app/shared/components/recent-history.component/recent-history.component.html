@@ -2,13 +2,13 @@
     <div class="header">
         <h4 class="heading">Recent QR Codes</h4>
         <div class="header-action-buttons">
-            <button>View All</button>
-            <button (click)="historyService.clearAllHistoryEntries()">Clear All</button>
+            <button (click)="goToViewAllPage()">View All</button>
+            <button (click)="clearAllHistory()">Clear All</button>
         </div>
     </div>
 
     <div class="history-list">
-        @for(historyEntry of historyList().slice(-recentHistoryEntryLimit).reverse(); track historyEntry) {
+        @for(historyEntry of historyList().slice(-recentHistoryEntryLimit).reverse(); track historyEntry.url) {
         <app-history-entry [history]="historyEntry"></app-history-entry>
         }
     </div>
