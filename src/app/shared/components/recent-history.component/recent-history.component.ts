@@ -12,6 +12,8 @@ export class RecentHistoryComponent implements OnInit {
   historyService = inject(HistoryService);
   readonly historyList = this.historyService.qrHistory;
 
+  readonly recentHistoryEntryLimit = 5;
+
   ngOnInit(): void {
     this.historyService.getHistory();
   }

@@ -8,7 +8,7 @@
     </div>
 
     <div class="history-list">
-        @for(historyEntry of historyList(); track historyEntry) {
+        @for(historyEntry of historyList().slice(-recentHistoryEntryLimit).reverse(); track historyEntry) {
         <app-history-entry [history]="historyEntry"></app-history-entry>
         }
     </div>
