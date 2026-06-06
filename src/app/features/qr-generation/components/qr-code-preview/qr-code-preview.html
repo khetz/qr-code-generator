@@ -21,7 +21,7 @@
             <div class="share-options" appClickOutside (clickOutside)="closeShareOptions()">
                 <button (click)="openShareOptions()">Share</button>
 
-                <app-share-menu [class.open]="openShareMenu"></app-share-menu>
+                <app-share-menu [qrlinkToShare]="qrData()" [class.open]="openShareMenu" (closeMenu)="closeShareOptions()"></app-share-menu>
             </div>
         </div>
     </div>
