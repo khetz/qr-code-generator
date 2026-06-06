@@ -10,5 +10,10 @@
         @for(historyEntry of reversedList; track historyEntry.url) {
          <app-history-entry [history]="historyEntry"></app-history-entry>
         }
+        @empty {
+            <div class="empty-state">
+                There are no recently generated qr codes
+            </div>
+        }
     </div>
 </div>
