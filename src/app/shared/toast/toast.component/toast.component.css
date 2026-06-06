@@ -18,3 +18,12 @@
 .success {
     background: #2e7d32;
 }
+
+.error {
+    background: red;
+}
+
+.message {
+    font-size: 14px;
+    font-weight: 700;
+}

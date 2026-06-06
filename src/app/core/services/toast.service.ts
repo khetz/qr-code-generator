@@ -14,6 +14,10 @@ export class ToastService {
     this.addToast(message, 'success');
   }
 
+  error(message: string) {
+    this.addToast(message, 'error')
+  }
+
   addToast(message: string, type: ToastType) {
     let newToast: Toast = {
       id: this.nextToastId++,
