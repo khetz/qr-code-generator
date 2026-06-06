@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { HistoryService } from '../../../core/services/history.service';
 import { HistoryEntryComponent } from '../history-entry.component/history-entry.component';
 
@@ -8,7 +8,11 @@ import { HistoryEntryComponent } from '../history-entry.component/history-entry.
   templateUrl: './recent-history.component.html',
   styleUrl: './recent-history.component.css',
 })
-export class RecentHistoryComponent {
+export class RecentHistoryComponent implements OnInit {
   historyService = inject(HistoryService);
   readonly historyList = this.historyService.qrHistory;
+
+  ngOnInit(): void {
+    this.historyService.getHistory();
+  }
 }
