@@ -35,9 +35,17 @@ export class HistoryEntryComponent {
   }
 
   regenerateQRCode() {
-    if (!this.router.currentNavigation()?.finalUrl?.toString().includes('history')) {
+    if (!this.router.url.includes('history')) {
+      let currentUrl = this.router.currentNavigation()?.initialUrl?.toString();
       this.regenerateQR.emit(this.history().url.toString());
       return;
     }
+
+    this.router.navigate([''], {
+      state: {
+        url: this.history().url.toString()
+      }
+    });
+
   }
 }
