@@ -1,5 +1,15 @@
 .container {
     display: flex;
-    gap: 10px;
+    justify-content: space-between;
     padding: 4px;
+}
+
+.column {
+    flex: 1;
+}
+
+.action-options {
+    display: flex;
+    gap: 4px;
+    justify-content: flex-end;
 }
