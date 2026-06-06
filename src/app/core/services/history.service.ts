@@ -23,7 +23,7 @@ export class HistoryService {
     localStorage.setItem(this.localStorageHistoryName, JSON.stringify(this.qrGenerationHistory()));
   }
 
-  clearHistoryEntry() {
+  clearAllHistoryEntries() {
     this.qrGenerationHistory.set([]);
     localStorage.setItem(this.localStorageHistoryName, JSON.stringify(this.qrGenerationHistory()));
   }
