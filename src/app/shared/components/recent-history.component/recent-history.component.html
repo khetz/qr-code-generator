@@ -9,7 +9,7 @@
 
     <div class="history-list">
         @for(historyEntry of historyList().slice(-recentHistoryEntryLimit).reverse(); track historyEntry.url) {
-        <app-history-entry [history]="historyEntry"></app-history-entry>
+        <app-history-entry [history]="historyEntry" (regenerateQR)="sendUrlForRegeneration($event)"></app-history-entry>
         }
         @empty {
             <div class="empty-state">

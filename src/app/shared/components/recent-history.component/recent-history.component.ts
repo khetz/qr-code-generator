@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, output } from '@angular/core';
 import { HistoryService } from '../../../core/services/history.service';
 import { HistoryEntryComponent } from '../history-entry.component/history-entry.component';
 import { Router } from '@angular/router';
@@ -16,6 +16,7 @@ export class RecentHistoryComponent implements OnInit {
 
   readonly historyList = this.historyService.qrHistory;
   private readonly router = inject(Router);
+  readonly regenerateQR = output<string>();
 
   ngOnInit(): void {
     this.historyService.getHistory();
@@ -27,5 +28,9 @@ export class RecentHistoryComponent implements OnInit {
 
   goToViewAllPage() {
     this.router.navigateByUrl('view-all-history');
+  }
+
+  sendUrlForRegeneration(url: string) {
+    this.regenerateQR.emit(url);
   }
 }
