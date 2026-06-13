@@ -16,10 +16,6 @@
         0 12px 24px rgba(0, 0, 0, .08);
 }
 
-h4 {
-    margin: 0;
-}
-
 .qr-code-section {
     display: flex;
     justify-content: center;
@@ -28,8 +24,11 @@ h4 {
     min-height: 160px;
     width: 100%;
     border: rgba(0, 0, 0, 0.2) 1px solid;
-    border-radius: 8px;
+    background: white;
+    padding: 24px;
+    border-radius: 20px;
     overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
 }
 
 .png-code {
@@ -85,10 +84,6 @@ app-share-menu.open {
 
     .container {
         gap: 30px;
-    }
-
-    h4 {
-        font-size: 20px;
     }
 
     .qr-code-section {
