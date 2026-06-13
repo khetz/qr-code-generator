@@ -5,6 +5,15 @@
     border: black solid 1px;
     border-radius: 8px;
     padding: 20px;
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, .05),
+        0 4px 12px rgba(0, 0, 0, .04)
+}
+
+.qr-input-section:hover {
+    box-shadow:
+        0 4px 6px rgba(0, 0, 0, .06),
+        0 12px 24px rgba(0, 0, 0, .08);
 }
 
 h4 {
@@ -48,7 +57,7 @@ mat-icon {
 
 input {
     border-radius: 8px;
-    border: solid 1px rgba(0,0,0,0.5);
+    border: solid 1px rgba(0, 0, 0, 0.5);
     width: 100%;
     padding: 10px 10px 10px 40px;
 
