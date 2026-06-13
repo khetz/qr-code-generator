@@ -20,3 +20,7 @@ button {
     background: none;
 }
 
+.theme-icon:hover {
+    transform: rotate(20deg)
+}
+
