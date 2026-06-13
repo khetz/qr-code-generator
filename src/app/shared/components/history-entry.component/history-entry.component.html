@@ -1,8 +1,11 @@
 <div class="container">
-    <span class="column">{{formatUrl(history().url)}}</span>
-    <span class="column">{{formatCreationTime(history().creationTime)}}</span>
-    <div class="action-options column">
-        <button (click)="copyURL(history().url)">Copy</button>
-        <button (click)="regenerateQRCode()">Regenerate QR code</button>
+    <div class="qr-info">
+        <span>{{formatUrl(history().url)}}</span>
+        <span>{{formatCreationTime(history().creationTime)}}</span>
+    </div>
+
+    <div class="action-options">
+        <button class="ghost-button" (click)="copyURL(history().url)">Copy</button>
+        <button class="ghost-button" (click)="regenerateQRCode()">Regenerate</button>
     </div>
 </div>
