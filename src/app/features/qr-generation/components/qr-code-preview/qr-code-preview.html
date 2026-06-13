@@ -1,12 +1,12 @@
 <div class="container card">
     <h2>QR Code Preview</h2>
-    <div class="qr-code-section">
+    <div class="qr-code-section" [class.run-reveal]="isAnimating">
         <qrcode [qrdata]="qrData()" [width]="qrCodeWidth" [allowEmptyString]="true" elementType="svg"
             (qrCodeURL)="onSvgUrlChange($event)">
         </qrcode>
         <div class="png-code">
             <qrcode [qrdata]="qrData()" [width]="qrCodeWidth" [allowEmptyString]="true" elementType="canvas"
-                (qrCodeURL)="onPngUrlChange($event)">
+                (qrCodeURL)="onPngUrlChange($event)" (qrCodeChange)="triggerAnimation()">
             </qrcode>
         </div>
     </div>

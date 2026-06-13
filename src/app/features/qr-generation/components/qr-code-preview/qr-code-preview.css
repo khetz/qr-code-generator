@@ -16,6 +16,18 @@
         0 12px 24px rgba(0, 0, 0, .08);
 }
 
+@keyframes qrAppear {
+    from {
+        opacity: 0;
+        transform: scale(.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 .qr-code-section {
     display: flex;
     justify-content: center;
@@ -28,7 +40,11 @@
     padding: 24px;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+}
+
+.run-reveal {
+    animation: qrAppear .25s ease-out;
 }
 
 .png-code {

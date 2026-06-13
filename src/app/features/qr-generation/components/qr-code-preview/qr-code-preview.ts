@@ -28,6 +28,7 @@ export class QrCodePreview implements OnInit {
   private readonly historyService = inject(HistoryService);
 
   openShareMenu: boolean = false;
+  isAnimating: boolean = false;
 
   ngOnInit(): void {
     this.breakpointObserver.observe([
@@ -43,6 +44,14 @@ export class QrCodePreview implements OnInit {
         this.qrCodeWidth = 300;
       }
     })
+  }
+
+  triggerAnimation() {
+    this.isAnimating = false;
+
+    setTimeout(() => {
+      this.isAnimating = true;
+    }, 1);
   }
 
   onSvgUrlChange(url: SafeUrl) {
