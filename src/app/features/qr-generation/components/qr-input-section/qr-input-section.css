@@ -65,6 +65,11 @@ input {
     color: #64748b;
 }
 
+.validation-message {
+    font-size: 0.85rem;
+    color: red;
+}
+
 @media(min-width: 768px) {
     :host {
         width: 50%;
