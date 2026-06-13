@@ -9,3 +9,15 @@ html, body {
 *, *::before, *::after {
     box-sizing: border-box;
 }
+
+h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
