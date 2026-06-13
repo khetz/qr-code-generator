@@ -3,7 +3,7 @@ html, body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family:'Geist',sans-serif
 }
 
 *, *::before, *::after {
@@ -20,4 +20,12 @@ h2 {
     margin: 0;
     font-size: 1.5rem;
     font-weight: 700;
+}
+
+button {
+    height: 48px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all .2s ease;
 }
