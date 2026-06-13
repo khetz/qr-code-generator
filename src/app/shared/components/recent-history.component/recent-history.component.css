@@ -16,22 +16,24 @@
         0 12px 24px rgba(0, 0, 0, .08);
 }
 
-h4 {
+h3 {
     margin: 0;
+    font-size: 0.8rem;
+    color: #64748b;
+    opacity: 0.5;
 }
 
-.header {
+.action-buttons {
     display: flex;
-    justify-content: space-between;
-}
-
-.header-action-buttons {
-    display: flex;
+    flex-direction: column;
     gap: 4px;
 }
 
 @media(min-width: 768px) {
-    h4 {
-        font-size: 20px;
+    .action-buttons {
+        align-self: center;
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
     }
 }

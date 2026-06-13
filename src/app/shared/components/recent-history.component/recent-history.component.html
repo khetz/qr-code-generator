@@ -1,10 +1,7 @@
 <div class="container card">
     <div class="header">
         <h2>Recent QR Codes</h2>
-        <div class="header-action-buttons">
-            <button (click)="goToViewAllPage()">View All</button>
-            <button (click)="clearAllHistory()">Clear All</button>
-        </div>
+        <h3>Your last generated qr codes</h3>
     </div>
 
     <div class="history-list">
@@ -12,10 +9,15 @@
         <app-history-entry [history]="historyEntry" (regenerateQR)="sendUrlForRegeneration($event)"></app-history-entry>
         }
         @empty {
-            <div class="empty-state">
-                There are no recently generated qr codes
-            </div>
+        <div class="empty-state">
+            There are no recently generated qr codes
+        </div>
         }
+    </div>
+
+    <div class="action-buttons">
+        <button class="ghost-button" (click)="goToViewAllPage()">View All</button>
+        <button class="danger-ghost-button" (click)="clearAllHistory()">Clear All</button>
     </div>
 
 </div>
