@@ -16,10 +16,6 @@
         0 12px 24px rgba(0, 0, 0, .08);
 }
 
-h4 {
-    margin: 0;
-}
-
 .user-input-section {
     display: flex;
     flex-direction: column;
@@ -64,8 +60,9 @@ input {
 }
 
 .input-description {
-    font-size: 10px;
-    color: gray;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #64748b;
 }
 
 @media(min-width: 768px) {
@@ -77,15 +74,7 @@ input {
         gap: 20px;
     }
 
-    h4 {
-        font-size: 20px;
-    }
-
     input {
         height: 50px;
-    }
-
-    .input-description {
-        font-size: 14px;
     }
 }
