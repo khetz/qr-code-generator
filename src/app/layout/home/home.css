@@ -5,6 +5,7 @@
     flex-direction: column;
     overflow: auto;
     scrollbar-width: none;
+    background: #f8fafc;
 }
 
 .content-section {
