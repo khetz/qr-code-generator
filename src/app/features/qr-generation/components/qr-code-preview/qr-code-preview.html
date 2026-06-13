@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container card">
     <h2>QR Code Preview</h2>
     <div class="qr-code-section">
         <qrcode [qrdata]="qrData()" [width]="qrCodeWidth" [allowEmptyString]="true" elementType="svg"
@@ -12,14 +12,14 @@
     </div>
     <div class="qr-download-sharing">
         <div class="download">
-            <button (click)="downloadImage(pngDownloadUrl, 'qrcode.png')">Download (PNG)</button>
-            <button (click)="downloadImage(svgDownloadUrl, 'qrcode.svg')">Download (SVG)</button>
+            <button class="primary-button" (click)="downloadImage(pngDownloadUrl, 'qrcode.png')">Download (PNG)</button>
+            <button class="secondary-button" (click)="downloadImage(svgDownloadUrl, 'qrcode.svg')">Download (SVG)</button>
         </div>
 
         <div class="sharing">
-            <button (click)="copyLink()">Copy URL</button>
+            <button class="secondary-button" (click)="copyLink()">Copy URL</button>
             <div class="share-options" appClickOutside (clickOutside)="closeShareOptions()">
-                <button (click)="openShareOptions()">Share</button>
+                <button class="secondary-button" (click)="openShareOptions()">Share</button>
 
                 <app-share-menu [qrlinkToShare]="qrData()" [class.open]="openShareMenu" (closeMenu)="closeShareOptions()"></app-share-menu>
             </div>
@@ -27,6 +27,6 @@
     </div>
 
     <div class="add-to-history">
-        <button (click)="addHistoryEntry()">Add to history</button>
+        <button class="secondary-button" (click)="addHistoryEntry()">Add to history</button>
     </div>
 </div>

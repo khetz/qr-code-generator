@@ -29,3 +29,25 @@ button {
     font-weight: 600;
     transition: all .2s ease;
 }
+
+button:hover { 
+    transform: translateY(-2px);
+}
+
+button:active { 
+    transform: translateY(0);
+}
+
+.primary-button {
+    background: black;
+    color: white;
+}
+
+.secondary-button {
+    background: white;
+    border: 1px solid #e2e9f0;
+}
+
+.card {
+    transform: translateY(-4px);
+}
