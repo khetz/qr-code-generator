@@ -11,18 +11,15 @@
         </div>
     </div>
     <div class="qr-download-sharing">
-        <div class="download">
-            <button class="primary-button" (click)="downloadImage(pngDownloadUrl, 'qrcode.png')">Download (PNG)</button>
-            <button class="secondary-button" (click)="downloadImage(svgDownloadUrl, 'qrcode.svg')">Download (SVG)</button>
-        </div>
+        <button class="primary-button" (click)="downloadImage(pngDownloadUrl, 'qrcode.png')">Download (PNG)</button>
+        <button class="secondary-button" (click)="downloadImage(svgDownloadUrl, 'qrcode.svg')">Download (SVG)</button>
 
-        <div class="sharing">
-            <button class="secondary-button" (click)="copyLink()">Copy URL</button>
-            <div class="share-options" appClickOutside (clickOutside)="closeShareOptions()">
-                <button class="secondary-button" (click)="openShareOptions()">Share</button>
+        <button class="secondary-button" (click)="copyLink()">Copy URL</button>
+        <div class="share-options" appClickOutside (clickOutside)="closeShareOptions()">
+            <button class="secondary-button" (click)="openShareOptions()">Share</button>
 
-                <app-share-menu [qrlinkToShare]="qrData()" [class.open]="openShareMenu" (closeMenu)="closeShareOptions()"></app-share-menu>
-            </div>
+            <app-share-menu [qrlinkToShare]="qrData()" [class.open]="openShareMenu"
+                (closeMenu)="closeShareOptions()"></app-share-menu>
         </div>
     </div>
 

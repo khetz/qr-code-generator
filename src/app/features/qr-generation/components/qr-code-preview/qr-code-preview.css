@@ -52,29 +52,18 @@
 }
 
 .qr-download-sharing {
-    display: flex;
-    flex-direction: column;
     gap: 5px;
 }
 
-.download {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.sharing {
-    display: flex;
+.share-options button {
     width: 100%;
-    flex-direction: column;
-    gap: 5px;
 }
 
 .share-options {
     position: relative;
 }
 
-.sharing .share-options button,
+.share-options button,
 .add-to-history button {
     width: 100%;
 }
@@ -101,25 +90,17 @@ app-share-menu.open {
     }
 
     .qr-download-sharing {
-        gap: 10px;
+        display: grid;
+        grid-template-columns: auto auto;
     }
 
     .qr-download-sharing button {
         border-radius: 8px;
     }
 
-    .download,
-    .sharing {
-        flex-direction: row;
-        gap: 10px;
-    }
-
     .container button {
         flex: 1;
+        width: 100%;
         font-size: 14px;
-    }
-
-    .sharing .share-options {
-        flex: 1;
     }
 }
