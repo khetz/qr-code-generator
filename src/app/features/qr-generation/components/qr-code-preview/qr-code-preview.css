@@ -54,7 +54,7 @@
 .qr-download-sharing {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
 }
 
 .share-options button {
@@ -65,9 +65,20 @@
     position: relative;
 }
 
-.share-options button,
+.share-options button {
+    width: 100%;
+}
+
 .add-to-history button {
     width: 100%;
+    background: transparent;
+    border: 1px solid #e2e9f0;
+    color: #6b7280;
+}
+
+.add-to-history button:active {
+    background: #f1f5f9;
+    color: inherit;
 }
 
 app-share-menu.open {
@@ -76,6 +87,11 @@ app-share-menu.open {
     pointer-events: auto;
 }
 
+.add-to-history {
+    margin-top: 4px;
+    padding-top: 14px;
+    border-top: 1px solid #e2e9f0;
+}
 
 @media(min-width: 768px) {
     :host {
