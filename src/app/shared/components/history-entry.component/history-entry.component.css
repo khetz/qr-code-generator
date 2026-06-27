@@ -19,6 +19,7 @@
 .qr-info span:first-child {
     font-size: 14px;
     font-weight: 600;
+    color: var(--color-text-primary)
 }
 
 .qr-info span:last-child {
