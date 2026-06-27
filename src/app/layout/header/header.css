@@ -24,3 +24,7 @@ button {
     transform: rotate(20deg)
 }
 
+.theme-icon mat-icon {
+    color: var(--color-text-primary);
+}
+
