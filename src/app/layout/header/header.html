@@ -3,8 +3,8 @@
         <h1>KhetzQR</h1>
     </div>
 
-    <button mat-icon-button class="theme-icon">
-        <mat-icon>dark_mode</mat-icon>
+    <button mat-icon-button class="theme-icon" (click)="themeService.toggleTheme()">
+        <mat-icon>{{ themeService.isDark() ? 'dark_mode' : 'light_mode'}}</mat-icon>
     </button>
 
 </nav>

@@ -55,13 +55,13 @@ mat-icon {
 
 input {
     border-radius: 8px;
-    border: solid 1px #cbd5e1;
+    border: solid 1px var(--color-border-input);
     width: 100%;
     padding: 10px 12px 10px 40px;
 }
 
 input:hover { 
-    border-color: #94a3b8;
+    border-color: var(--color-border-input-hover);
 }
 
 input:focus {
@@ -74,7 +74,7 @@ input:focus {
 .input-description {
     font-size: 0.9rem;
     font-weight: 500;
-    color: #64748b;
+    color: var(--color-text-secondary);
 }
 
 .validation-message {

@@ -79,12 +79,14 @@ h1 {
     font-size: 2rem;
     font-weight: 800;
     letter-spacing: -0.04em;
+    color: var(--color-text-primary);
 }
 
 h2 {
     margin: 0;
     font-size: 1.5rem;
     font-weight: 700;
+    color: var(--color-text-primary)
 }
 
 button {
@@ -104,18 +106,19 @@ button:hover {
 
 button:active { 
     transform: translateY(0);
-    background: #2563eb;
+    background: var(--color-accent);
     color: white;
 }
 
 .primary-button {
-    background: black;
-    color: white;
+    background: var(--color-btn-primary-bg);
+    color: var(--color-btn-primary-text);
 }
 
 .secondary-button {
-    background: white;
-    border: 1px solid #e2e9f0;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-primary);
 }
 
 .card {
@@ -124,31 +127,31 @@ button:active {
 
 .ghost-button {
     background: transparent;
-    border: 1px solid #e2e9f0;
-    color: inherit;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-primary);
     height: 36px;
     padding: 0 12px;
     font-size: 13px;
 }
 
 .ghost-button:active {
-    background: #f1f5f9;
+    background: var(--color-bg-hover-subtle);
     color: inherit;
     transform: translateY(0);
 }
 
 .danger-ghost-button {
     background: transparent;
-    border: 1px solid #e2e9f0;
-    color: #6b7280;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
     height: 36px;
     padding: 0 12px;
     font-size: 13px;
 }
 
 .danger-ghost-button:hover {
-    color: #dc2626;
-    border-color: #fca5a5;
-    background: #fef2f2;
+    color: var(--color-danger);
+    border-color: var(--color-danger-border);
+    background: var(--color-danger-bg);
     transform: translateY(-2px);
 }
