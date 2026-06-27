@@ -1,19 +1,22 @@
+<app-header></app-header>
+
 <div class="container">
-    <app-header></app-header>
     <div class="title-section">
-        <button (click)="goBackToHome()">Back</button>
-        <h1 class="title">Recent QR Codes</h1>
-        <button class="clear-all" (click)="clearAllHistory()">Clear All</button>
+        <div class="header-left">
+            <button class="ghost-button" (click)="goBackToHome()">Back</button>
+            <h1 class="title">Recent QR Codes</h1>
+        </div>
+        <button class="danger-ghost-button" (click)="clearAllHistory()">Clear All</button>
     </div>
 
     <div class="history-list">
         @for(historyEntry of reversedList; track historyEntry.url) {
-         <app-history-entry [history]="historyEntry"></app-history-entry>
+        <app-history-entry [history]="historyEntry"></app-history-entry>
         }
         @empty {
-            <div class="empty-state">
-                There are no recently generated qr codes
-            </div>
+        <div class="empty-state">
+            There are no recently generated qr codes
+        </div>
         }
     </div>
 </div>
