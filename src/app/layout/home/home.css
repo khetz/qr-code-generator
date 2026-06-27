@@ -5,7 +5,7 @@
     flex-direction: column;
     overflow: auto;
     scrollbar-width: none;
-    background: #f8fafc;
+    background: var(--color-bg-card);
 }
 
 .content-section {

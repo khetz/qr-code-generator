@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    border: 1px solid #e2e9f0;
+    border: 1px solid var(--color-border);
     border-radius: 12px;
     padding: 20px;
     box-shadow:
@@ -35,7 +35,7 @@
     align-self: center;
     min-height: 160px;
     width: 100%;
-    border: 1px solid #e2e9f0;
+    border: 1px solid var(--color-border);
     background: white;
     padding: 24px;
     border-radius: 12px;
@@ -73,11 +73,11 @@
     width: 100%;
     background: transparent;
     border: 1px solid #e2e9f0;
-    color: #6b7280;
+    color: var(--color-text-secondary);
 }
 
 .add-to-history button:active {
-    background: #f1f5f9;
+    background: var(--color-bg-hover-subtle);
     color: inherit;
 }
 
@@ -90,7 +90,7 @@ app-share-menu.open {
 .add-to-history {
     margin-top: 4px;
     padding-top: 14px;
-    border-top: 1px solid #e2e9f0;
+    border-top: 1px solid var(--color-border);
 }
 
 @media(min-width: 768px) {
