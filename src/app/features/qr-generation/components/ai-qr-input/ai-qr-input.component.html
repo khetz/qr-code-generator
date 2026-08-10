@@ -1,0 +1,49 @@
+<div class="ai-input-container">
+    <div class="ai-header">
+        <span class="ai-icon">✦</span>
+        <span>Describe your QR code</span>
+    </div>
+
+    <div class="input-row">
+        <textarea [(ngModel)]="prompt" placeholder="e.g. WiFi QR for network MyWiFi, password secret123, WPA2"
+            [disabled]="loading()" (keydown.enter)="$event.preventDefault(); generate()" rows="2"></textarea>
+        <button (click)="generate()" [disabled]="loading() || !prompt.trim()" class="generate-btn">
+            {{ loading() ? 'Generating...' : 'Generate' }}
+        </button>
+    </div>
+
+    <div class="examples">
+        <span class="examples-label">Try:</span>
+        @for (example of examples; track example) {
+        <button class="example-chip" (click)="useExample(example)">
+            {{ example }}
+        </button>
+        }
+    </div>
+
+    @if (error()) {
+    <div class="error-message">{{ error() }}</div>
+    }
+
+    @if (result()) {
+    <div class="result-card">
+        <div class="result-header">
+            <span class="type-badge">{{ result()!.type | uppercase }}</span>
+            <span class="result-label">{{ result()!.label }}</span>
+        </div>
+
+        <div class="result-fields">
+            @for (entry of resultEntries(); track entry[0]) {
+            <div class="field-row">
+                <span class="field-key">{{ entry[0] }}</span>
+                <span class="field-value">{{ entry[1] }}</span>
+            </div>
+            }
+        </div>
+
+        <div class="result-content">
+            <code>{{ result()!.content }}</code>
+        </div>
+    </div>
+    }
+</div>
