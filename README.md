@@ -1,4 +1,5 @@
 # 🔳 KhetzQR — Angular Client
+Built to avoid paying for overpriced qr generators online :)
 
 A QR code generator app built with **Angular**, featuring AI-powered QR code generation via Claude and a polished UI with dark mode support.
 
@@ -41,7 +42,7 @@ src/
 
 ## Features
 
-**QR Code Generator** — Configure and preview QR codes in real time with customisable styling options.
+**QR Code Generator** — Configure and preview QR codes in real time with customisable styling options. Supports png and svg downloads and, sharing via email, Whatsapp and copying the input url.
 
 **AI Generation** — Describe what you want in a sentence, and Claude generates the QR configuration JSON. The AI generation component emits the config to the QR preview component, which renders it instantly.
 
